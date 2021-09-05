@@ -1,9 +1,14 @@
 package com.firstSpringFrame.learnspringframework.game;
 
-public class GameRunner {
-	private MarioGame game;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-	public GameRunner(MarioGame game) { // Constructor
+@Component
+public class GameRunner {
+	private GameConsole game;
+
+	@Autowired
+	public GameRunner(GameConsole game) { // Constructor
 		this.game = game;
 	}
 
